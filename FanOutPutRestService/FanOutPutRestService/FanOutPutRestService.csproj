@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FanLibrary">
+      <HintPath>..\..\..\ObligatoriskFanLibrary\FanLibrary\bin\Debug\netstandard2.0\FanLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>
