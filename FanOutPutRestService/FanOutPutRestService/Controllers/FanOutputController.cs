@@ -13,7 +13,7 @@ namespace FanOutPutRestService.Controllers
     [ApiController]
     public class FanOutputController : ControllerBase
     {
-        private static List<FanOutput> sqlDbFanOutput = new List<FanOutput>(Utility.GenerateFanOutputs(30));
+        private static List<FanOutput> sqlDbFanOutput = new List<FanOutput>(Utility.GenerateFanOutputs(35));
         // GET: api/FanOutput
         [HttpGet]
         public IEnumerable<FanOutput> Get()

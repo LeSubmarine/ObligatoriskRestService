@@ -34,10 +34,9 @@ namespace FanOutPutRestService
         {
 
             List<FanOutput> generatedFanOutputs = new List<FanOutput>();
-
-            for (int i = 0; i < numberOfGens; i++)
+            for (int i = 0; i < numberOfGens && i < FanNames.Count; i++)
             {
-                generatedFanOutputs.Add(new FanOutput(i,FanNames[random.Next(FanNames.Count())],GenerateDouble(15,25),GenerateDouble(30,80)));
+                generatedFanOutputs.Add(new FanOutput(i,FanNames[i],GenerateDouble(15,25),GenerateDouble(30,80)));
             }
 
 
