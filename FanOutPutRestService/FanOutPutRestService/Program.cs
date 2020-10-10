@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FanLibrary;
+using FanOutPutRestService.Controllers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -14,6 +16,7 @@ namespace FanOutPutRestService
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            (new FanOutputController()).Post(new FanOutput(0,"test",25,50));
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

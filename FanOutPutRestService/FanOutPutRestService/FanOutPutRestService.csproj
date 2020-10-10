@@ -6,11 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="FanLibrary">
-      <HintPath>..\..\..\ObligatoriskFanLibrary\FanLibrary\bin\Debug\netstandard2.0\FanLibrary.dll</HintPath>
+      <HintPath>..\..\..\ObligatoriskFanLibrary\FanLibrary\bin\Debug\netcoreapp3.0\FanLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 
