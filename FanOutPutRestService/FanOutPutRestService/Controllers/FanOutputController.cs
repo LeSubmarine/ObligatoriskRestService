@@ -15,8 +15,6 @@ namespace FanOutPutRestService.Controllers
     public class FanOutputController : ControllerBase
     {
         private const string connectionString = "Server=tcp:sqlserverhen.database.windows.net,1433;Initial Catalog=SqlServerFans;Persist Security Info=False;User ID=hensql99;Password=abesild123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        private static List<FanOutput> sqlDbFanOutput = new List<FanOutput>(Utility.GenerateFanOutputs(35));
-
 
 
         // GET: api/FanOutput
@@ -129,7 +127,7 @@ namespace FanOutPutRestService.Controllers
             try
             {
                 new FanOutput(value.Id, value.Name, value.Temperature, value.Humidity);
-                Delete(sqlDbFanOutput.Find(fanoutput => fanoutput.Id == id).Id);
+                Delete(id);
                 Post(value);
             }
             catch (FormatException)
